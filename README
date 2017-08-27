@@ -1,0 +1,53 @@
+# 工具背景
+
+在日常的工作中，经常出现插入事情。经常性的被打断。导致效率底下。加班加点严重，而且没有产出
+
+正确的工作理念是：任何时间专注做一个类别的一件事。完成后再开始下一件。
+
+taskmgr为了解决这个问题
+
+# 详细设计
+
+工具语言：golang
+数据库: sqlite
+
+## 功能设计：
+
+> type: 工作类别
+
+tadd 增加类别
+tdel 删除类别
+tshow 查看当前类别
+
+> item: 工作事项
+
+iget 获取一个类别优先级最高的事项
+
+iupdate 更新事件优先级/状态
+
+iadd 增加事项
+
+idel 删除事项
+
+
+## 数据库设计
+
+> t_type 表
+
+id 自增 主键
+
+type_name type名称
+
+
+
+> t_item 表
+
+id 自增 主键
+
+item_name 非空 item名称 varchar(128)
+
+status 非空 item状态 varchar(128)
+
+pri 非空 优先级 int32
+
+type_id 外键 type的主键

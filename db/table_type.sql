@@ -1,0 +1,4 @@
+CREATE TABLE t_type (
+    type_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    type_name VARCHAR(128)
+);
